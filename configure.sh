@@ -4,7 +4,7 @@ git pull
 #sudo apt-get update
 #sudo apt-get install pycharm
 ##SmartGit
-sudo apt-get install -y gdebi python-virtualenv pip
+sudo apt-get install -y gdebi python-virtualenv python-pip
 if [ ! -f smartgit-18_1_1.deb ]; then
    wget https://www.syntevo.com/downloads/smartgit/smartgit-18_1_1.deb
 fi
