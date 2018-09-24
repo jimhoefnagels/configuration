@@ -1,4 +1,5 @@
-
+#!/bin/bash
+git pull
 ##smartgit
 sudo apt-get remove smartgit
 ##pycharm
