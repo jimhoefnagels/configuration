@@ -13,8 +13,8 @@ sudo gdebi smartgit-18_1_1.deb
 ##PyCharm
 sudo snap install pycharm-professional --classic
 ##ssh config
-chmod 600 id.rsa
-ssh-add id.rsa
+chmod 600 ~/.ssh/id.rsa
+ssh-add ~/.ssh/id.rsa
 git clone git@gitlab.dynapps.be:tools/ssh-config.git
 ln -s ~/.ssh/config ssh-config/config
 
