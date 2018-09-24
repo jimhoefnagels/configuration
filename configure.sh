@@ -25,7 +25,7 @@ for cust in dynapps; do
   if [ ! -d /opt/odoo/buildouts/${cust} ]; then
     git clone -b local git@gitlab.dynapps.be:buildout/${cust}.git /opt/odoo/buildouts/${cust}/local
   fi
-  cd /opt/odoo/buildouts/${cust}/local
+  cd /opt/odoo/buildouts/${cust}/local/local
   virtualenv /opt/odoo/buildouts/${cust}/virtualenv --no-setuptools
   /opt/odoo/buildouts/${cust}/virtualenv/bin/activate
   python bootstrap.py
