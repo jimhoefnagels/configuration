@@ -13,6 +13,7 @@ sudo gdebi smartgit-18_1_1.deb
 sudo snap install pycharm-professional --classic
 
 sudo mkdir /opt/odoo
+sudo chown $USER.$USER /opt/odoo
 if [ ! -d /opt/odoo/dynapps ]; then
   git clone git@gitlab.dynapps.be:buildout/dynapps.git /opt/odoo/dynapps
 fi
