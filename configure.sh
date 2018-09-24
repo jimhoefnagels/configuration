@@ -5,7 +5,9 @@ git pull
 #sudo apt-get install pycharm
 ##SmartGit
 sudo apt-get install gdebi -y
-wget https://www.syntevo.com/downloads/smartgit/smartgit-18_1_1.deb
+if [ ! -f smartgit-18_1_1.deb ]; then
+   wget https://www.syntevo.com/downloads/smartgit/smartgit-18_1_1.deb
+fi
 sudo gdebi smartgit-18_1_1.deb
 ##PyCharm
 sudo snap install pycharm-professional --classic
