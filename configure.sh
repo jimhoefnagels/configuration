@@ -11,6 +11,9 @@ fi
 sudo gdebi smartgit-18_1_1.deb
 ##PyCharm
 sudo snap install pycharm-professional --classic
+##ssh config
+git clone git@gitlab.dynapps.be:tools/ssh-config.git
+ln -s ~/.ssh/config ssh-config/config
 
 sudo mkdir /opt/odoo
 sudo chown $USER.$USER /opt/odoo
