@@ -4,4 +4,4 @@
 #sudo apt-get update
 #sudo apt-get install pycharm
 
-sudo snap install pycharm-community
+sudo snap install pycharm-community --classic
