@@ -10,6 +10,7 @@ if [ ! -f smartgit-18_1_1.deb ]; then
    wget https://www.syntevo.com/downloads/smartgit/smartgit-18_1_1.deb
 fi
 sudo gdebi smartgit-18_1_1.deb
+j
 ##PyCharm
 sudo snap install pycharm-professional --classic
 ##ssh config
