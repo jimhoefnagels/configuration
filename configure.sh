@@ -20,6 +20,7 @@ ln -s ~/.ssh/config ssh-config/config
 sudo mkdir /opt/odoo
 sudo chown $USER.$USER /opt/odoo
 mkdir /opt/odoo/buildouts
-if [ ! -d /opt/odoo/dynapps ]; then
-  git clone git@gitlab.dynapps.be:buildout/dynapps.git /opt/odoo/buildouts/dynapps
+if [ ! -d /opt/odoo/buildouts/dynapps ]; then
+  git clone -b local git@gitlab.dynapps.be:buildout/dynapps.git /opt/odoo/buildouts/dynapps/local
+  cd /opt/odoo/buildouts/dynapps/local
 fi
