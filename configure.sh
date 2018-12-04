@@ -17,6 +17,8 @@ chmod 600 ~/.ssh/id.rsa
 ssh-add ~/.ssh/id.rsa
 git clone git@gitlab.dynapps.be:tools/ssh-config.git
 ln -s ~/.ssh/config ssh-config/config
+wget https://addons.mozilla.org/firefox/downloads/file/1133119/lastpass_password_manager-4.19.0.5-fx.xpi
+firefox lastpass_password_manager-4.19.0.5-fx.xpi
 
 sudo mkdir /opt/odoo
 sudo chown $USER.$USER /opt/odoo
