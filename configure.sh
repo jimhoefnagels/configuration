@@ -6,7 +6,7 @@ git pull
 #sudo apt-get install pycharm
 
 ##SmartGit
-sudo apt-get install -y gdebi python-virtualenv python-pip libxslt1-dev libxml2-dev libtiff5-dev libjpeg8-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python-tk
+sudo apt-get install -y gdebi python-virtualenv python-pip libxslt1-dev libxml2-dev libtiff5-dev libjpeg8-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python-tk postgresql
 if [ ! -f ~/Downloads/smartgit-18_1_1.deb ]; then
    wget -P ~/Downloads/ https://www.syntevo.com/downloads/smartgit/smartgit-18_1_1.deb
 fi
