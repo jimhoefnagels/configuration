@@ -4,7 +4,7 @@ git pull
 #sudo apt-get update
 #sudo apt-get install pycharm
 ##SmartGit
-sudo apt-get install -y gdebi python-virtualenv python-pip
+sudo apt-get install -y gdebi python-virtualenv python-pip libxslt1-dev libxml2-dev
 if [ ! -f smartgit-18_1_1.deb ]; then
    wget https://www.syntevo.com/downloads/smartgit/smartgit-18_1_1.deb
 fi
@@ -15,10 +15,8 @@ sudo snap install pycharm-professional --classic
 ##ssh config
 chmod 600 ~/.ssh/id.rsa
 ssh-add ~/.ssh/id.rsa
-git clone git@gitlab.dynapps.be:tools/ssh-config.git
-ln -s ~/.ssh/config ssh-config/config
-wget https://addons.mozilla.org/firefox/downloads/file/1133119/lastpass_password_manager-4.19.0.5-fx.xpi
-firefox lastpass_password_manager-4.19.0.5-fx.xpi
+git clone git@gitlab.dynapps.be:tools/ssh-config.git /opt/ssh-config
+ln -s ~/.ssh/config /opt/ssh-config/config
 
 sudo mkdir /opt/odoo
 sudo chown $USER.$USER /opt/odoo
@@ -31,4 +29,11 @@ for cust in dynapps; do
   virtualenv /opt/odoo/buildouts/${cust}/virtualenv --no-setuptools
   /opt/odoo/buildouts/${cust}/virtualenv/bin/activate
   python bootstrap.py
+  deactivate
+  # bin/buildout
 done
+
+# Install lastpass in firefox
+wget https://addons.mozilla.org/firefox/downloads/file/1133119/lastpass_password_manager-4.19.0.5-fx.xpi
+firefox lastpass_password_manager-4.19.0.5-fx.xpi
+
