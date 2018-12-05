@@ -32,7 +32,7 @@ sudo -u postgres createuser -s jim
 chmod 600 ~/.ssh/id.rsa
 ssh-add ~/.ssh/id.rsa
 git clone git@gitlab.dynapps.be:tools/ssh-config.git ~/ssh-config
-ln -fs ~/.ssh/config ~/ssh-config
+ln -fs ~/.ssh/config ~/ssh-config/config
 
 if [ ! -d /opt/odoo ]; then
     sudo mkdir /opt/odoo
