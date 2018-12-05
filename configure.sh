@@ -39,8 +39,8 @@ fi
 for cust in ${OLD_BUILDOUTS}; do
       for env in ${BUILDOUT_ENVS}; do
       echo 'cloning '${env}' of '${cust}
-      if [ ! -d /opt/odoo/buildouts/${cust} ]; then
-         git clone -b local git@gitlab.dynapps.be:buildout/${cust}.git /opt/odoo/buildouts/${cust}/env
+      if [ ! -d /opt/odoo/buildouts/${cust}/${env} ]; then
+         git clone -b ${env} git@gitlab.dynapps.be:buildout/${cust}.git /opt/odoo/buildouts/${cust}/${env}
       done
    fi
    cd /opt/odoo/buildouts/${cust}/local/local
