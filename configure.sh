@@ -62,3 +62,5 @@ if [ ! -f ~/Downloads/lastpass_password_manager-4.19.0.5-fx.xpi ]; then
     wget -P ~/Downloads/ https://addons.mozilla.org/firefox/downloads/file/1133119/lastpass_password_manager-4.19.0.5-fx.xpi
     firefox ~/Downloads/lastpass_password_manager-4.19.0.5-fx.xpi
 fi
+# Odoo debug plugin
+# https://addons.mozilla.org/firefox/downloads/file/1034121/odoo_debug-3.5-an+fx.xpi?src=search
