@@ -17,6 +17,8 @@ if [ ! -f ~/Downloads/smartgit-18_1_1.deb ]; then
 fi
 if [ $(dpkg -l smartgit) == '' ]; then
    sudo gdebi ~/Downloads/smartgit-18_1_1.deb
+else
+   echo 'Smartgit already installed'
 fi
 
 ##PyCharm
