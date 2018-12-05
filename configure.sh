@@ -1,5 +1,8 @@
 #!/bin/bash
 DL='~/Downloads/'
+OLD_BUILDOUTS='dynapps'
+NEW_BUILDOUTS=''
+BUILDOUT_ENVS='local testing'
 git pull
 #sudo add-apt-repository ppa:bionic-beaver/pycharm
 #sudo apt-get update
@@ -33,15 +36,17 @@ if [ ! -d /opt/odoo ]; then
     mkdir /opt/odoo/buildouts
 fi
 
-for cust in dynapps; do
-  if [ ! -d /opt/odoo/buildouts/${cust} ]; then
-    git clone -b local git@gitlab.dynapps.be:buildout/${cust}.git /opt/odoo/buildouts/${cust}/local
-  fi
-  cd /opt/odoo/buildouts/${cust}/local/local
-  virtualenv /opt/odoo/buildouts/${cust}/virtualenv --no-setuptools
-  . /opt/odoo/buildouts/${cust}/virtualenv/bin/activate
-  python bootstrap.py
-  deactivate
+for cust in ${OLD_BUILDOUTS}; do
+   if [ ! -d /opt/odoo/buildouts/${cust} ]; then
+      for env in ${BUILDOUT_ENVS}; do
+         git clone -b local git@gitlab.dynapps.be:buildout/${cust}.git /opt/odoo/buildouts/${cust}/env
+      done
+   fi
+   cd /opt/odoo/buildouts/${cust}/local/local
+   virtualenv /opt/odoo/buildouts/${cust}/virtualenv --no-setuptools
+   . /opt/odoo/buildouts/${cust}/virtualenv/bin/activate
+   python bootstrap.py
+   deactivate
   # bin/buildout
 done
 
