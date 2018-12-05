@@ -15,7 +15,9 @@ sudo apt-get install -y gdebi python-virtualenv python-pip libxslt1-dev libxml2-
 if [ ! -f ~/Downloads/smartgit-18_1_1.deb ]; then
    wget -P ~/Downloads/ https://www.syntevo.com/downloads/smartgit/smartgit-18_1_1.deb
 fi
-sudo gdebi ~/Downloads/smartgit-18_1_1.deb
+if [ $(dpkg -l smartgit) == '' ]; then
+   sudo gdebi ~/Downloads/smartgit-18_1_1.deb
+fi
 
 ##PyCharm
 sudo snap install pycharm-professional --classic
