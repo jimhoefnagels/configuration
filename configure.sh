@@ -55,12 +55,10 @@ for cust in ${OLD_BUILDOUTS}; do
   # bin/buildout
 done
 for cust in ${NEW_BUILDOUTS}; do
-   for env in ${BUILDOUT_ENVS}; do
-      echo 'cloning '${env}' of '${cust}
-      if [ ! -d /opt/odoo/buildouts/${cust}/${env} ]; then
-         git clone -b ${env} git@gitlab.dynapps.be:customers/${cust}/buildout.git /opt/odoo/buildouts/${cust}/buildout
+      echo 'cloning '${cust}
+      if [ ! -d /opt/odoo/buildouts/${cust}/buildout ]; then
+         git clone git@gitlab.dynapps.be:customers/${cust}/buildout.git /opt/odoo/buildouts/${cust}/buildout
       fi
-   done
    cd /opt/odoo/buildouts/${cust}/buildout
    virtualenv /opt/odoo/buildouts/${cust}/virtualenv --no-setuptools
    . /opt/odoo/buildouts/${cust}/virtualenv/bin/activate
