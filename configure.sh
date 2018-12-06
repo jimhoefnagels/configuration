@@ -57,7 +57,7 @@ done
 for cust in ${NEW_BUILDOUTS}; do
       echo 'cloning '${cust}
       if [ ! -d /opt/odoo/buildouts/${cust}/buildout ]; then
-         git clone git@gitlab.dynapps.be:customers/${cust}/buildout.git /opt/odoo/buildouts/${cust}/buildout
+         git clone -b develop git@gitlab.dynapps.be:customers/${cust}/buildout.git /opt/odoo/buildouts/${cust}/buildout
       fi
    cd /opt/odoo/buildouts/${cust}/buildout
    virtualenv /opt/odoo/buildouts/${cust}/virtualenv --no-setuptools
