@@ -60,6 +60,7 @@ for cust in ${NEW_BUILDOUTS}; do
          git clone -b develop git@gitlab.dynapps.be:customers/${cust}/buildout.git /opt/odoo/buildouts/${cust}/buildout
       fi
    cd /opt/odoo/buildouts/${cust}/buildout
+   ln -s local.cfg buildout.cfg
    virtualenv /opt/odoo/buildouts/${cust}/virtualenv --no-setuptools
    . /opt/odoo/buildouts/${cust}/virtualenv/bin/activate
    python bootstrap.py
