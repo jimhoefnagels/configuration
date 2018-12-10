@@ -12,6 +12,7 @@ sudo apt-get install -y gdebi python-virtualenv python-pip libxslt1-dev libxml2-
 libfreetype6-dev liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python-tk postgresql postgresql-server-dev-10 python-dev \
 libldap2-dev libssl-dev libsasl2-dev cython evolution-ews libffi-dev
 
+sudo pip install setuptools
 
 ##SmartGit
 if [ ! -f ~/Downloads/smartgit-18_1_1.deb ]; then
