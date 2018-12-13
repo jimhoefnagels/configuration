@@ -28,6 +28,7 @@ fi
 sudo snap install pycharm-professional --classic
 sudo snap install htop
 sudo snap install slack --classic
+sudo snap install setuptools
 
 ## PostGreSQL
 sudo -u postgres createuser -s ${USER}
