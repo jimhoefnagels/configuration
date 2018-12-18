@@ -25,10 +25,18 @@ else
 fi
 
 ##PyCharm / htop / slack
-sudo snap install pycharm-professional --classic
-sudo snap install htop
+if 'pycharm' not in $(snap list); then
+  sudo snap install pycharm-professional --classic
+fi
+if 'htop' not in $(snap list); then
+sudo snap install htop --classic
+fi
+if 'slack' not in $(snap list); then
 sudo snap install slack --classic
-sudo snap install setuptools
+fi
+if 'setuptools' not in $(snap list); then
+sudo snap install setuptools --classic
+if  
 
 ## PostGreSQL
 sudo -u postgres createuser -s ${USER}
