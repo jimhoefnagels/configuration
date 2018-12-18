@@ -29,6 +29,7 @@ fi
 list=$(snap list)
 echo ${list}
 for p in ${SNAP}; do 
+  echo 'checking '$p' is in '$list
   if [[ ${list} =~ ${p} ]]; then
     echo 'installing '${p}
     sudo snap install $p --classic
