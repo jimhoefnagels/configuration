@@ -3,6 +3,7 @@ DL='~/Downloads/'
 OLD_BUILDOUTS='dynapps'
 NEW_BUILDOUTS='demo12 demo11 intracto'
 BUILDOUT_ENVS='local testing'
+SNAP='pycharm-professional htop setuptools slack'
 git pull
 #sudo add-apt-repository ppa:bionic-beaver/pycharm
 #sudo apt-get update
@@ -25,18 +26,14 @@ else
 fi
 
 ##PyCharm / htop / slack
-if [ 'pycharm' not in $(snap list) ]; then
-  sudo snap install pycharm-professional --classic
-fi
-if [ 'htop' not in $(snap list) ]; then
-sudo snap install htop --classic
-fi
-if [ 'slack' not in $(snap list) ]; then
-sudo snap install slack --classic
-fi
-if [ 'setuptools' not in $(snap list) ]; then
-sudo snap install setuptools --classic
-if  
+for p in ${SNAP}; do 
+  if [ $(snap list) ~= $p ]; then
+    echo 'installing $p'
+    sudo snap install $p --classic
+  else
+    echo '$p already installed'
+  fi
+done
 
 ## PostGreSQL
 sudo -u postgres createuser -s ${USER}
