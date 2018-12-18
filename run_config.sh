@@ -1,1 +1,1 @@
-git pull && sh configure.sh
+git pull && bash configure.sh
