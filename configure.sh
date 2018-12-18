@@ -25,16 +25,16 @@ else
 fi
 
 ##PyCharm / htop / slack
-if 'pycharm' not in $(snap list); then
+if [ 'pycharm' not in $(snap list) ]; then
   sudo snap install pycharm-professional --classic
 fi
-if 'htop' not in $(snap list); then
+if [ 'htop' not in $(snap list) ]; then
 sudo snap install htop --classic
 fi
-if 'slack' not in $(snap list); then
+if [ 'slack' not in $(snap list) ]; then
 sudo snap install slack --classic
 fi
-if 'setuptools' not in $(snap list); then
+if [ 'setuptools' not in $(snap list) ]; then
 sudo snap install setuptools --classic
 if  
 
