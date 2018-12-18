@@ -19,14 +19,14 @@ sudo pip install setuptools
 if [ ! -f ~/Downloads/smartgit-18_1_1.deb ]; then
    wget -P ~/Downloads/ https://www.syntevo.com/downloads/smartgit/smartgit-18_1_1.deb
 fi
-if [ $(dpkg -l smartgit) == '' ]; then
+if [[ $(dpkg -l smartgit) == '' ]]; then
    sudo gdebi ~/Downloads/smartgit-18_1_1.deb
 else
    echo 'Smartgit already installed'
 fi
 
 ##PyCharm / htop / slack
-if [ "this is a test" =~ "test" ]; then
+if [[ "this is a test" =~ "test" ]]; then
   echo 'OK'
 else
   echo 'not OK'
