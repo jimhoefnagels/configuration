@@ -1,7 +1,7 @@
 #!/bin/bash
 DL='~/Downloads/'
 OLD_BUILDOUTS='dynapps'
-NEW_BUILDOUTS='demo11 intracto'
+NEW_BUILDOUTS='demo12 demo11 intracto'
 BUILDOUT_ENVS='local testing'
 git pull
 #sudo add-apt-repository ppa:bionic-beaver/pycharm
