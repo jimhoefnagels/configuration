@@ -28,8 +28,8 @@ fi
 ##PyCharm / htop / slack
 for p in ${SNAP}; do 
 l=$(snap list)
-echo l
-  if [ l =~ $p ]; then
+echo $l
+  if [ $l =~ $p ]; then
     echo 'installing '${p}
     sudo snap install $p --classic
   else
