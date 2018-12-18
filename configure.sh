@@ -26,11 +26,6 @@ else
 fi
 
 ##PyCharm / htop / slack
-if [[ "this is a test" =~ "notest" ]]; then
-  echo 'OK'
-else
-  echo 'not OK'
-fi
 l=$(snap list)
 echo $l
 for p in ${SNAP}; do 
