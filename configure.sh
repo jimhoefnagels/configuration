@@ -1,7 +1,7 @@
 #!/bin/bash
 DL='~/Downloads/'
 OLD_BUILDOUTS='dynapps'
-NEW_BUILDOUTS='demo12 demo11 intracto'
+NEW_BUILDOUTS='demo12 demo11 intracto twerk'
 BUILDOUT_ENVS='local testing'
 SNAP='pycharm-professional htop setuptools slack'
 git pull
