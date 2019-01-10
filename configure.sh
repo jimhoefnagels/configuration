@@ -5,10 +5,10 @@ NEW_BUILDOUTS='dynapps10 demo12 demo11 intracto twerk'
 BUILDOUT_ENVS='local testing'
 SNAP='pycharm-professional htop setuptools slack'
 git pull
-#sudo add-apt-repository ppa:bionic-beaver/pycharm
-#sudo apt-get update
-#sudo apt-get install pycharm
 
+# apt install requirements
+sudo apt-get update
+sudo apt-get upgrade
 sudo apt-get install -y gdebi python-virtualenv python-pip \
 libcups2-dev \
 libxslt1-dev libxml2-dev \
@@ -16,6 +16,7 @@ libtiff5-dev libjpeg8-dev zlib1g-dev \
 libfreetype6-dev liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python-tk postgresql postgresql-server-dev-10 python-dev \
 libldap2-dev libssl-dev libsasl2-dev cython evolution-ews libffi-dev node-less
 
+#pip install requirements
 sudo pip install setuptools
 
 ##SmartGit
