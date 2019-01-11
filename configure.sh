@@ -88,8 +88,8 @@ for cust in ${NEW_P3BUILDOUTS}; do
       fi
    cd /opt/odoo/buildouts/${cust}/buildout
    ln -s local.cfg buildout.cfg
-   virtualenv -p python3.6 /opt/odoo/buildouts/${cust}/virtualenv --no-setuptools
-   . /opt/odoo/buildouts/${cust}/virtualenv/bin/activate
+   virtualenv /opt/odoo/buildouts/${cust}/virtualenv/bootstrap3 -p python3 --no-setuptools
+   . /opt/odoo/buildouts/${cust}/virtualenv/bootstrap3/bin/activate
    python bootstrap.py
    deactivate
   # bin/buildout
