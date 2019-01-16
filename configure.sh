@@ -18,7 +18,8 @@ libfreetype6-dev liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python-tk postgre
 libldap2-dev libssl-dev libsasl2-dev cython evolution-ews libffi-dev node-less
 
 #pip install requirements
-sudo pip install setuptools
+#sudo pip install setuptools
+sudo pip install --upgrade pip setuptools
 
 ##SmartGit
 if [ ! -f ~/Downloads/smartgit-18_1_1.deb ]; then
