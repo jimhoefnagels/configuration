@@ -5,6 +5,8 @@ NEW_P2BUILDOUTS='dynapps10'
 NEW_P3BUILDOUTS='dynapps10 demo12 demo11 intracto twerk'
 BUILDOUT_ENVS='local testing'
 SNAP='pycharm-professional htop setuptools slack'
+SMARTGITURL='https://www.syntevo.com/downloads/smartgit/'
+SMARTGITDEB='smartgit-18_2_4.deb'
 git pull
 
 # apt install requirements
@@ -22,11 +24,11 @@ libldap2-dev libssl-dev libsasl2-dev cython evolution-ews libffi-dev node-less
 sudo pip install --upgrade pip setuptools
 
 ##SmartGit
-if [ ! -f ~/Downloads/smartgit-18_1_1.deb ]; then
-   wget -P ~/Downloads/ https://www.syntevo.com/downloads/smartgit/smartgit-18_1_1.deb
-fi
-if [[ $(dpkg -l smartgit) == '' ]]; then
-   sudo gdebi ~/Downloads/smartgit-18_1_1.deb
+if [ ! -f ~/Downloads/${SMARTGITDEB} ]; then
+   wget -P ~/Downloads/ ${SMARTGITURL}${SMARTGITDEB}
+#fi
+#if [[ $(dpkg -l smartgit) == '' ]]; then
+   sudo gdebi ~/Downloads/${SMARTGITDEB}
 else
    echo 'Smartgit already installed'
 fi
