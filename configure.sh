@@ -43,8 +43,13 @@ fi
 #else
 #   echo 'Forticlient already installed'
 #fi
+
 wget -O - https://repo.fortinet.com/repo/ubuntu/DEB-GPG-KEY | sudo apt-key add - 
-deb [arch=amd64] https://repo.fortinet.com/repo/ubuntu/ /bionic multiverse 
+grep repo.fortinet.com /etc/apt/sources.list
+if [[ $? != 0 ]]; then
+    echo "deb [arch=amd64] https://repo.fortinet.com/repo/ubuntu/ /bionic multiverse" | sudo tee -a /etc/apt/sources.list
+fi
+read
 sudo apt-get update
 sudo apt install forticlient
 
