@@ -7,6 +7,8 @@ BUILDOUT_ENVS='local testing'
 SNAP='pycharm-professional htop setuptools slack'
 SMARTGITURL='https://www.syntevo.com/downloads/smartgit/'
 SMARTGITDEB='smartgit-18_2_4.deb'
+FORTIURL='https://hadler.me/files/'
+FORTIDEB='forticlient-sslvpn_4.4.2329-1_amd64.deb'
 git pull
 
 # apt install requirements
@@ -31,6 +33,17 @@ if [ ! -f ~/Downloads/${SMARTGITDEB} ]; then
    sudo gdebi ~/Downloads/${SMARTGITDEB}
 else
    echo 'Smartgit already installed'
+fi
+## FORTICLIENT
+
+##SmartGit
+if [ ! -f ~/Downloads/${FORTIDEB} ]; then
+   wget -P ~/Downloads/ ${FORTIURL}${FORTIDEB}
+#fi
+#if [[ $(dpkg -l smartgit) == '' ]]; then
+   sudo gdebi ~/Downloads/${FORTIDEB}
+else
+   echo 'Forticlient already installed'
 fi
 
 ##PyCharm / htop / slack
