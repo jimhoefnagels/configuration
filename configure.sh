@@ -35,16 +35,18 @@ else
    echo 'Smartgit already installed'
 fi
 ## FORTICLIENT
-
-##SmartGit
-if [ ! -f ~/Downloads/${FORTIDEB} ]; then
-   wget -P ~/Downloads/ ${FORTIURL}${FORTIDEB}
+#if [ ! -f ~/Downloads/${FORTIDEB} ]; then
+#   wget -P ~/Downloads/ ${FORTIURL}${FORTIDEB}
 #fi
 #if [[ $(dpkg -l smartgit) == '' ]]; then
-   sudo gdebi ~/Downloads/${FORTIDEB}
-else
-   echo 'Forticlient already installed'
-fi
+#   sudo gdebi ~/Downloads/${FORTIDEB}
+#else
+#   echo 'Forticlient already installed'
+#fi
+wget -O - https://repo.fortinet.com/repo/ubuntu/DEB-GPG-KEY | sudo apt-key add - 
+deb [arch=amd64] https://repo.fortinet.com/repo/ubuntu/ /bionic multiverse 
+sudo apt-get update
+sudo apt install forticlient
 
 ##PyCharm / htop / slack
 for p in ${SNAP}; do 
