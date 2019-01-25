@@ -58,7 +58,6 @@ grep repo.fortinet.com /etc/apt/sources.list
 if [[ $? != 0 ]]; then
     echo "deb [arch=amd64] https://repo.fortinet.com/repo/ubuntu/ /bionic multiverse" | sudo tee -a /etc/apt/sources.list
 fi
-read
 sudo apt-get update
 sudo apt install forticlient
 
