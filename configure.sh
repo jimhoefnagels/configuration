@@ -13,7 +13,7 @@ PYLINTURL='git+https://github.com/oca/pylint-odoo.git'
 git pull
 
 # configure bash
-ln -s .dotfiles/* ~/* 
+ln -s ~ .dotfiles/* 
 
 # apt install requirements
 sudo apt-get update
