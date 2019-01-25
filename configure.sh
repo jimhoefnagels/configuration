@@ -27,6 +27,10 @@ libldap2-dev libssl-dev libsasl2-dev cython evolution-ews libffi-dev node-less
 sudo pip install --upgrade pip setuptools
 sudo pip install --upgrade ${PYLINTURL}
 
+## Configure pylint
+sudo cp pylint-odoo /usr/local/bin/
+sudo chmod +x /usr/local/bin/pylint-odoo
+
 ##SmartGit
 if [ ! -f ~/Downloads/${SMARTGITDEB} ]; then
    wget -P ~/Downloads/ ${SMARTGITURL}${SMARTGITDEB}
