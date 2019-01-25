@@ -9,6 +9,7 @@ SMARTGITURL='https://www.syntevo.com/downloads/smartgit/'
 SMARTGITDEB='smartgit-18_2_4.deb'
 FORTIURL='https://hadler.me/files/'
 FORTIDEB='forticlient-sslvpn_4.4.2329-1_amd64.deb'
+PYLINTURL='git+https://github.com/oca/pylint-odoo.git'
 git pull
 
 # apt install requirements
@@ -24,6 +25,7 @@ libldap2-dev libssl-dev libsasl2-dev cython evolution-ews libffi-dev node-less
 #pip install requirements
 #sudo pip install setuptools
 sudo pip install --upgrade pip setuptools
+sudo pip install --upgrade ${PYLINTURL}
 
 ##SmartGit
 if [ ! -f ~/Downloads/${SMARTGITDEB} ]; then
