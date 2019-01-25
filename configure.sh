@@ -12,6 +12,9 @@ FORTIDEB='forticlient-sslvpn_4.4.2329-1_amd64.deb'
 PYLINTURL='git+https://github.com/oca/pylint-odoo.git'
 git pull
 
+# configure bash
+ln -s .dotfiles/* ~/* 
+
 # apt install requirements
 sudo apt-get update
 sudo apt-get upgrade
