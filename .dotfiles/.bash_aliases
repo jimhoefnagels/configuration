@@ -1,1 +1,1 @@
-alias getpylintrc='wget https://gitlab.dynapps.be/verticals/custom/blob/master/.pylintrc'
+alias getpylintrc='wget https://gitlab.dynapps.be/verticals/custom/raw/master/.pylintrc?inline=false'
