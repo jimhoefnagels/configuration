@@ -1,4 +1,2 @@
-
 #!/bin/bash
-
 /usr/local/bin/pylint --load-plugins=pylint_odoo -e odoolint -d manifest-required-author *
