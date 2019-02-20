@@ -2,7 +2,7 @@
 DL='~/Downloads/'
 OLD_BUILDOUTS=''
 NEW_P2BUILDOUTS='dynapps10'
-NEW_P3BUILDOUTS='vertical_accounting_v12 dynapps10 demo12 demo11 intracto twerk'
+NEW_P3BUILDOUTS='vertical_accounting_v12 demo12 demo11 intracto twerk'
 BUILDOUT_ENVS='local testing'
 SNAP='pycharm-professional htop setuptools slack'
 SMARTGITURL='https://www.syntevo.com/downloads/smartgit/'
