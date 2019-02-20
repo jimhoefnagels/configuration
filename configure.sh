@@ -108,6 +108,7 @@ for cust in ${NEW_P2BUILDOUTS}; do
    ln -s local.cfg buildout.cfg
    virtualenv -p python2.7 /opt/odoo/buildouts/${cust}/virtualenv --no-setuptools
    . /opt/odoo/buildouts/${cust}/virtualenv/bin/activate
+#   pip install mr.developer
    python bootstrap.py
    deactivate
   # bin/buildout
