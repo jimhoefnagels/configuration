@@ -53,13 +53,13 @@ fi
 #   echo 'Forticlient already installed'
 #fi
 
-wget -O - https://repo.fortinet.com/repo/ubuntu/DEB-GPG-KEY | sudo apt-key add - 
-grep repo.fortinet.com /etc/apt/sources.list
-if [[ $? != 0 ]]; then
-    echo "deb [arch=amd64] https://repo.fortinet.com/repo/ubuntu/ /bionic multiverse" | sudo tee -a /etc/apt/sources.list
-fi
-sudo apt-get update
-sudo apt install forticlient
+# wget -O - https://repo.fortinet.com/repo/ubuntu/DEB-GPG-KEY | sudo apt-key add - 
+# grep repo.fortinet.com /etc/apt/sources.list
+# if [[ $? != 0 ]]; then
+#    echo "deb [arch=amd64] https://repo.fortinet.com/repo/ubuntu/ /bionic multiverse" | sudo tee -a /etc/apt/sources.list
+# fi
+# sudo apt-get update
+# sudo apt install forticlient
 
 ##PyCharm / htop / slack
 for p in ${SNAP}; do 
