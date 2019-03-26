@@ -78,7 +78,14 @@ chmod 600 ~/.ssh/id.rsa
 ssh-add ~/.ssh/id.rsa
 git clone git@gitlab.dynapps.be:tools/ssh-config.git ~/ssh-config
 ln -fs ~/ssh-config/config ~/.ssh/config
+# Usefull git repos
+if [ ! -d /opt/git ]; then
+    sudo mkdir /opt/git
+    sudo chown $USER.$USER /opt/git
+fi
+git clone git@gitlab.dynapps.be:Toon.Meynen/monitoring_checks.git /opt/git/
 
+# ODOO Projects
 if [ ! -d /opt/odoo ]; then
     sudo mkdir /opt/odoo
     sudo chown $USER.$USER /opt/odoo
