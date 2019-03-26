@@ -13,9 +13,11 @@ PYLINTURL='git+https://github.com/oca/pylint-odoo.git'
 git pull
 
 # configure bash
+# -----------------
 ln -fs ~/configuration/.dotfiles/.bash_aliases -t ~
 
 # apt install requirements
+# -----------------
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install -y gdebi python-virtualenv python-pip python-gitlab \
@@ -31,10 +33,13 @@ sudo pip install --upgrade pip setuptools
 sudo pip install --upgrade ${PYLINTURL}
 
 ## Configure pylint
+# -----------------
 sudo cp pylint-odoo /usr/local/bin/
 sudo chmod +x /usr/local/bin/pylint-odoo
 
 ##SmartGit
+
+# -----------------
 if [ ! -f ~/Downloads/${SMARTGITDEB} ]; then
    wget -P ~/Downloads/ ${SMARTGITURL}${SMARTGITDEB}
 #fi
@@ -61,7 +66,8 @@ fi
 # sudo apt-get update
 # sudo apt install forticlient
 
-##PyCharm / htop / slack
+# PyCharm / htop / slack
+# -----------------------
 for p in ${SNAP}; do 
   if [[ ! "$(snap list)" =~ "${p}" ]]; then
     sudo snap install $p --classic
@@ -71,21 +77,26 @@ for p in ${SNAP}; do
 done
 
 ## PostGreSQL
+# ------------
 sudo -u postgres createuser -s ${USER}
 
-##ssh config
+# ssh config
+# -----------------
 chmod 600 ~/.ssh/id.rsa
 ssh-add ~/.ssh/id.rsa
 git clone git@gitlab.dynapps.be:tools/ssh-config.git ~/ssh-config
 ln -fs ~/ssh-config/config ~/.ssh/config
+
 # Usefull git repos
+# ------------------
 if [ ! -d /opt/git ]; then
     sudo mkdir /opt/git
     sudo chown $USER.$USER /opt/git
 fi
-git clone git@gitlab.dynapps.be:Toon.Meynen/monitoring_checks.git /opt/git/
+git clone git@gitlab.dynapps.be:Toon.Meynen/monitoring_checks.git /opt/git/monitoring_checks
 
 # ODOO Projects
+# --------------
 if [ ! -d /opt/odoo ]; then
     sudo mkdir /opt/odoo
     sudo chown $USER.$USER /opt/odoo
@@ -135,6 +146,7 @@ for cust in ${NEW_P3BUILDOUTS}; do
 done
 
 # Install lastpass in firefox
+# ---------------------------
 if [ ! -f ~/Downloads/lastpass_password_manager-4.19.0.5-fx.xpi ]; then
     cd ~
     ll
