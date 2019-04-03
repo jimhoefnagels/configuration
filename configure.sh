@@ -8,7 +8,7 @@ SNAP='pycharm-professional htop setuptools slack'
 SMARTGITURL='https://www.syntevo.com/downloads/smartgit/'
 SMARTGITDEB='smartgit-18_2_4.deb'
 FORTIURL='https://hadler.me/files/'
-FORTIDEB='forticlient-sslvpn_4.4.2329-1_amd64.deb'
+FORTIDEB='forticlient-sslvpn_4.4.2333-1_amd64.deb'
 PYLINTURL='git+https://github.com/oca/pylint-odoo.git'
 git pull
 
@@ -48,15 +48,15 @@ if [ ! -f ~/Downloads/${SMARTGITDEB} ]; then
 else
    echo 'Smartgit already installed'
 fi
-## FORTICLIENT
-#if [ ! -f ~/Downloads/${FORTIDEB} ]; then
-#   wget -P ~/Downloads/ ${FORTIURL}${FORTIDEB}
-#fi
-#if [[ $(dpkg -l smartgit) == '' ]]; then
-#   sudo gdebi ~/Downloads/${FORTIDEB}
-#else
-#   echo 'Forticlient already installed'
-#fi
+# FORTICLIENT
+if [ ! -f ~/Downloads/${FORTIDEB} ]; then
+   wget -P ~/Downloads/ ${FORTIURL}${FORTIDEB}
+fi
+if [[ $(dpkg -l openforticlient) == '' ]]; then
+   sudo gdebi ~/Downloads/${FORTIDEB}
+else
+   echo 'Forticlient already installed'
+fi
 
 # wget -O - https://repo.fortinet.com/repo/ubuntu/DEB-GPG-KEY | sudo apt-key add - 
 # grep repo.fortinet.com /etc/apt/sources.list
