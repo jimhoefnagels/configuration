@@ -1,6 +1,6 @@
 #!/bin/bash
 DL='~/Downloads/'
-OLD_BUILDOUTS=''
+OLD_BUILDOUTS='dynapps700'
 NEW_P2BUILDOUTS='dynapps10'
 NEW_P3BUILDOUTS='dynapps12 vertical_accounting_v12 demo12 demo11 intracto twerk optimax'
 BUILDOUT_ENVS='local testing'
