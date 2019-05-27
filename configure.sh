@@ -2,7 +2,7 @@
 DL='~/Downloads/'
 OLD_BUILDOUTS=''
 NEW_P2BUILDOUTS='dynapps10 dynapps700'
-NEW_P3BUILDOUTS='gsu herbafrost dynapps12 vertical_accounting_v12 demo12 demo11 intracto twerk optimax'
+NEW_P3BUILDOUTS='atraxion herbafrost dynapps12 demo12 demo11 twerk optimax'
 BUILDOUT_ENVS='local testing'
 SNAP='pycharm-professional htop setuptools slack'
 SMARTGITURL='https://www.syntevo.com/downloads/smartgit/'
