@@ -10,11 +10,17 @@ SMARTGITDEB='smartgit-18_2_4.deb'
 FORTIURL='https://hadler.me/files/'
 FORTIDEB='forticlient-sslvpn_4.4.2333-1_amd64.deb'
 PYLINTURL='git+https://github.com/oca/pylint-odoo.git'
+EIDURL='https://eid.belgium.be/sites/default/files/software/'
+EIDDEB='eid-archive_2019.2_all.deb'
 git pull
 
 # configure bash
 # -----------------
 ln -fs ~/configuration/.dotfiles/.bash_aliases -t ~
+# setup eid software repositories
+# -------------------------------
+wget  -P ~/Downloads/ ${EIDURL}
+sudo gdebi ~/Downloads/${SMARTGITDEB}${EIDDEB}
 
 # apt install requirements
 # -----------------
