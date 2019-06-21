@@ -17,10 +17,6 @@ git pull
 # configure bash
 # -----------------
 ln -fs ~/configuration/.dotfiles/.bash_aliases -t ~
-# setup eid software repositories
-# -------------------------------
-wget  -P ~/Downloads/ ${EIDURL}
-sudo gdebi ~/Downloads/${SMARTGITDEB}${EIDDEB}
 
 # apt install requirements
 # -----------------
@@ -32,6 +28,12 @@ libxslt1-dev libxml2-dev \
 libtiff5-dev libjpeg8-dev zlib1g-dev \
 libfreetype6-dev liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python-tk postgresql postgresql-server-dev-10 python-dev \
 libldap2-dev libssl-dev libsasl2-dev cython evolution-ews libffi-dev node-less
+
+# setup eid software repositories
+# -------------------------------
+wget  -P ~/Downloads/ ${EIDURL}
+sudo gdebi ~/Downloads/${SMARTGITDEB}${EIDDEB}
+sudo apt-get install eid-viewer eid-mw
 
 #pip install requirements
 #sudo pip install setuptools
