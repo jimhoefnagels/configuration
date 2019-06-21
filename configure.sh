@@ -33,6 +33,7 @@ libldap2-dev libssl-dev libsasl2-dev cython evolution-ews libffi-dev node-less
 # -------------------------------
 wget  -P ~/Downloads/ ${EIDURL}${EIDDEB}
 sudo gdebi ~/Downloads/${EIDDEB}
+sudo apt-get update
 sudo apt-get install -y eid-viewer eid-mw
 
 #pip install requirements
