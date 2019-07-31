@@ -22,6 +22,7 @@ ln -fs ~/configuration/.dotfiles/.bash_aliases -t ~
 # -----------------
 sudo apt-get update
 sudo apt-get upgrade
+sudo apt autoremove
 sudo apt-get install -y gdebi python-virtualenv python-pip python-gitlab \
 libcups2-dev \
 libxslt1-dev libxml2-dev \
