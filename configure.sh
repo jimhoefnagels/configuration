@@ -12,6 +12,7 @@ FORTIDEB='forticlient-sslvpn_4.4.2333-1_amd64.deb'
 PYLINTURL='git+https://github.com/oca/pylint-odoo.git'
 EIDURL='https://eid.belgium.be/sites/default/files/software/'
 EIDDEB='eid-archive_2019.4_all.deb'
+LPFX='lastpass_password_manager-4.31.2.3-fx.xpi'
 git pull
 
 # configure bash
@@ -160,8 +161,8 @@ done
 if [ ! -f ~/Downloads/lastpass_password_manager-4.19.0.5-fx.xpi ]; then
     cd ~
     ll
-    wget -P ~/Downloads/ https://addons.mozilla.org/firefox/downloads/file/1133119/lastpass_password_manager-4.19.0.5-fx.xpi
-    firefox ~/Downloads/lastpass_password_manager-4.19.0.5-fx.xpi
+    wget -P ~/Downloads/ https://addons.mozilla.org/firefox/downloads/file/1133119/${LPFX}
+    firefox ~/Downloads/${LPFX}
 fi
 # TODO: Odoo debug plugin
 # https://addons.mozilla.org/firefox/downloads/file/1034121/odoo_debug-3.5-an+fx.xpi?src=search
