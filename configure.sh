@@ -11,7 +11,7 @@ FORTIURL='https://hadler.me/files/'
 FORTIDEB='forticlient-sslvpn_4.4.2333-1_amd64.deb'
 PYLINTURL='git+https://github.com/oca/pylint-odoo.git'
 EIDURL='https://eid.belgium.be/sites/default/files/software/'
-EIDDEB='eid-archive_2019.2_all.deb'
+EIDDEB='eid-archive_2019.4_all.deb'
 git pull
 
 # configure bash
