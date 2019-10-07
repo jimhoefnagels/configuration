@@ -2,7 +2,7 @@
 DL='~/Downloads/'
 OLD_BUILDOUTS=''
 NEW_P2BUILDOUTS='dynapps10 dynapps700'
-NEW_P3BUILDOUTS='allimex weh_12 gsu fruitatwork atraxion dynapps12'
+NEW_P3BUILDOUTS='allimex13 weh_12 gsu fruitatwork atraxion dynapps12'
 # disabled buildouts: 'twerk herbafrost demo12  optimax democrm'
 BUILDOUT_ENVS='local testing'
 SNAP='pycharm-professional htop setuptools slack'
