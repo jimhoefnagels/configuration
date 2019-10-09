@@ -7,13 +7,13 @@ NEW_P3BUILDOUTS='allimex13 weh_12 gsu fruitatwork atraxion dynapps12'
 BUILDOUT_ENVS='local testing'
 SNAP='pycharm-professional htop setuptools slack'
 SMARTGITURL='https://www.syntevo.com/downloads/smartgit/'
-SMARTGITDEB='smartgit-18_2_4.deb'
+SMARTGITDEB='smartgit-19_1_4.deb'
 FORTIURL='https://hadler.me/files/'
 FORTIDEB='forticlient-sslvpn_4.4.2333-1_amd64.deb'
 PYLINTURL='git+https://github.com/oca/pylint-odoo.git'
 EIDURL='https://eid.belgium.be/sites/default/files/software/'
 EIDDEB='eid-archive_2019.4_all.deb'
-LPFX='lastpass_password_manager-4.31.2.3-fx.xpi'
+LPFX='lastpass_password_manager-4.33.5.xpi'
 git pull
 
 # configure bash
@@ -53,7 +53,7 @@ sudo chmod +x /usr/local/bin/pylint-odoo
 
 # -----------------
 if [ ! -f ~/Downloads/${SMARTGITDEB} ]; then
-   wget -P ~/Downloads/ ${SMARTGITURL}${SMARTGITDEB}
+   wget -P ~/Downloads/ ${SMARTGITUL}${SMARTGITDEB}
 #fi
 #if [[ $(dpkg -l smartgit) == '' ]]; then
    sudo gdebi ~/Downloads/${SMARTGITDEB}
