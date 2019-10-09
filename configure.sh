@@ -51,16 +51,12 @@ sudo cp pylint-odoo /usr/local/bin/
 sudo chmod +x /usr/local/bin/pylint-odoo
 
 ##SmartGit
-
 # -----------------
 if [ ! -f ~/Downloads/${SMARTGITDEB} ]; then
    wget -P ~/Downloads/ ${SMARTGITURL}${SMARTGITDEB}
-#fi
-#if [[ $(dpkg -l smartgit) == '' ]]; then
-   sudo gdebi ~/Downloads/${SMARTGITDEB}
-else
-   echo 'Smartgit already installed'
 fi
+dpkg -s smartgit 2>/dev/null >/dev/null || sudo gdebi ~/Downloads/${SMARTGITDEB}
+
 # FORTICLIENT
 if [ ! -f ~/Downloads/${FORTIDEB} ]; then
    wget -P ~/Downloads/ ${FORTIURL}${FORTIDEB}
