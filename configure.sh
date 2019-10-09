@@ -25,8 +25,8 @@ ln -fs ~/configuration/.dotfiles/.bash_aliases -t ~
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt autoremove
-sudo apt-get install -y gdebi python-virtualenv python-pip python-gitlab \
-libcups2-dev \
+sudo apt-get install -y gdebi python-virtualenv python-pip python-gitlab 
+sudo apt-get install -y libcups2-dev \
 libxslt1-dev libxml2-dev \
 libtiff5-dev libjpeg8-dev zlib1g-dev \
 libfreetype6-dev liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python-tk postgresql postgresql-server-dev-10 python-dev \
