@@ -53,7 +53,7 @@ sudo chmod +x /usr/local/bin/pylint-odoo
 
 # -----------------
 if [ ! -f ~/Downloads/${SMARTGITDEB} ]; then
-   wget -P ~/Downloads/ ${SMARTGITUL}${SMARTGITDEB}
+   wget -P ~/Downloads/ ${SMARTGITURL}${SMARTGITDEB}
 #fi
 #if [[ $(dpkg -l smartgit) == '' ]]; then
    sudo gdebi ~/Downloads/${SMARTGITDEB}
