@@ -25,13 +25,16 @@ ln -fs ~/configuration/.dotfiles/.bash_aliases -t ~
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt autoremove
-sudo apt-get install -y gdebi python-virtualenv python-pip python-gitlab \
-sudo apt-get install -y libcups2-dev \
-libxslt1-dev libxml2-dev \
-libtiff5-dev libjpeg8-dev zlib1g-dev \
-libfreetype6-dev liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python-tk \
-postgresql postgresql-server-dev-all python-dev \
-libldap2-dev libssl-dev libsasl2-dev cython evolution-ews libffi-dev node-less
+# install office packages
+sudo apt-get install -y evolution-ews 
+# install general tools
+sudo apt-get install -y gdebi 
+# install python packages
+sudo apt-get install -y python-tk python-virtualenv python-pip python-gitlab cython python-dev
+# install postgres packages
+sudo apt-get install -y postgresql postgresql-server-dev-all 
+# other development pakcages
+sudo apt-get install -y libldap2-dev libssl-dev libsasl2-dev libffi-dev node-less libcups2-dev libxslt1-dev libxml2-dev libtiff5-dev libjpeg8-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev
 
 # setup eid software repositories
 # -------------------------------
