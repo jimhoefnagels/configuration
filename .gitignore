@@ -1,4 +1,4 @@
 *.deb
 *.xpi
-
+projects.txt
 /.idea/
