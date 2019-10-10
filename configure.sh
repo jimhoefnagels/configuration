@@ -1,21 +1,7 @@
 #!/bin/bash
-DL='~/Downloads/'
-OLD_BUILDOUTS=''
-NEW_P2BUILDOUTS='dynapps10 dynapps700'
-NEW_P3BUILDOUTS='allimex13 weh_12 gsu fruitatwork atraxion dynapps12'
-# disabled buildouts: 'twerk herbafrost demo12  optimax democrm'
-BUILDOUT_ENVS='local testing'
-SNAP='pycharm-professional htop setuptools slack'
-SMARTGITURL='https://www.syntevo.com/downloads/smartgit/'
-SMARTGITDEB='smartgit-19_1_4.deb'
-FORTIURL='https://hadler.me/files/'
-FORTIDEB='forticlient-sslvpn_4.4.2333-1_amd64.deb'
-PYLINTURL='git+https://github.com/oca/pylint-odoo.git'
-EIDURL='https://eid.belgium.be/sites/default/files/software/'
-EIDDEB='eid-archive_2019.4_all.deb'
-LPFX='lastpass_password_manager-4.33.5.xpi'
 git pull
-
+source ~/environment
+source ~/projects
 # configure bash
 # -----------------
 ln -fs ~/configuration/.dotfiles/.bash_aliases -t ~
