@@ -1,7 +1,7 @@
 #!/bin/bash
 git pull
-source ~/environment.txt
-source ~/projects.txt
+source ~/configuration/environment.txt
+source ~/configuration/projects.txt
 # configure bash
 # -----------------
 ln -fs ~/configuration/.dotfiles/.bash_aliases -t ~
