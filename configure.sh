@@ -97,7 +97,7 @@ sudo -u postgres createuser -s ${USER}
 # ssh config
 # -----------------
 sudo chmod 700 ~/.ssh
-ssh-add ~/.ssh/id.rsa
+ssh-add ~/.ssh/id_rsa
 git clone git@gitlab.dynapps.be:tools/ssh-config.git ~/ssh-config
 ln -fs ~/ssh-config/config ~/.ssh/config
 
