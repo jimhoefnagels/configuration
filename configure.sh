@@ -18,7 +18,7 @@ sudo apt-get install -y gdebi
 # install python packages
 sudo apt-get install -y python-tk python-virtualenv python-pip python-gitlab cython python-dev
 # install python3 packages
-sudo apt-get install -y python3-tk python3-virtualenv python3-pip python3-gitlab cython python3-dev python3-black
+sudo apt-get install -y python3-tk python3-virtualenv python3-pip python3-gitlab cython python3-dev
 # install postgres packages
 sudo apt-get install -y postgresql postgresql-server-dev-all 
 # other development pakcages
@@ -35,6 +35,7 @@ sudo apt-get install -y eid-viewer eid-mw
 #sudo pip install setuptools
 sudo pip install --upgrade pip setuptools
 sudo pip install --upgrade ${PYLINTURL}
+sudo pip install --upgrade black
 
 ## Configure pylint
 # -----------------
