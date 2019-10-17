@@ -35,7 +35,7 @@ sudo apt-get install -y eid-viewer eid-mw
 #sudo pip install setuptools
 sudo pip install --upgrade pip setuptools
 sudo pip install --upgrade ${PYLINTURL}
-sudo pip install --upgrade black
+sudo python3.7 -m pip install --upgrade black
 
 ## Configure pylint
 # -----------------
