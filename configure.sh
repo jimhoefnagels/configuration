@@ -156,3 +156,14 @@ if [ ! -f ~/Downloads/lastpass_password_manager-4.19.0.5-fx.xpi ]; then
 fi
 # TODO: Odoo debug plugin
 # https://addons.mozilla.org/firefox/downloads/file/1034121/odoo_debug-3.5-an+fx.xpi?src=search
+
+# Install Powerline
+# -----------------
+pip install --user powerline-status
+pip install --user git+git://github.com/powerline/powerline
+wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
+wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
+mv PowerlineSymbols.otf ~/.local/share/fonts/
+fc-cache -vf ~/.local/share/fonts/
+mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
+ln -s configuration/.dotfiles/.bashrc
