@@ -160,10 +160,14 @@ fi
 # Install Powerline
 # -----------------
 pip install --user powerline-status
+pip install --user powerline-gitstatus
 pip install --user git+git://github.com/powerline/powerline
 wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
 wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
-mv PowerlineSymbols.otf ~/.local/share/fonts/
-fc-cache -vf ~/.local/share/fonts/
-mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
-ln -s configuration/.dotfiles/.bashrc
+sudo mkdir -p /usr/share/fonts/opentype/powerlinesymbols/
+sudo mv PowerlineSymbols.otf /usr/share/fonts/opentype/powerlinesymbols/
+fc-cache -vf /usr/share/fonts/opentype/powerlinesymbols/
+sudo mv 10-powerline-symbols.conf /usr/share/fontconfig/conf.avail/
+ln -fs configuration/.dotfiles/.bashrc ~
+ln -fs configuration/.dotfiles/.vimrc ~
+powerline-daemon --replace
