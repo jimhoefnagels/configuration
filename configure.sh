@@ -159,8 +159,8 @@ fi
 
 # Install Powerline
 # -----------------
-pip install --user powerline-status
-pip install --user powerline-gitstatus
+sudo apt-get install --user powerline-status
+sudo apt-get install --user powerline-gitstatus
 pip install --user git+git://github.com/powerline/powerline
 wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
 wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf
